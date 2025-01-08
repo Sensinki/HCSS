@@ -3,7 +3,7 @@
 
 <section>
     <div id="arrow-start"></div>
-    <section class="verdeeldheid">
+    <section class="component">
         <img
             src="/images/verdeeldheid.png"
             alt="Verdeeldheid"
@@ -50,7 +50,7 @@
             border-bottom: 40vh solid #efefef;
         }
         
-        .verdeeldheid {
+        .component {
             display: grid;
             justify-items: center;
             align-items: center;
@@ -115,7 +115,7 @@
     }
 
     @media screen and (width > 52rem) {
-        .verdeeldheid {
+        .component {
             display: flex;
             flex-direction: row;
             justify-content: center;

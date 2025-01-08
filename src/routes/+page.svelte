@@ -99,8 +99,8 @@
         main {
             display: flex;
             flex-direction: column;
-            gap: 4em;
         }
+
     }
 
     @media screen and (width > 38rem) {

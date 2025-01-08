@@ -1,7 +1,7 @@
 <script>
 </script>
 
-<section>
+<section class="component">
     <img
         src="/images/landen.png"
         alt="World Map"
@@ -24,6 +24,7 @@
             align-items: center;
             padding: 0 2em;
             background-color: #1a3761;
+            padding: 0 2em 6em 2em;
 
             img {
                 max-width: 45em;
@@ -35,6 +36,7 @@
                 gap: 0.5em;
                 width: 80vw;
                 max-width: 40em;
+                padding-bottom: 0;
             }
         }
     }
