@@ -1,12 +1,20 @@
 <script>
     import WorldMap from "$lib/components/WorldMap.svelte";
+    import Verdeeldheid from "$lib/components/Verdeeldheid.svelte";
+    import NewYork from "$lib/components/NewYork.svelte";
+    import Manhattan from "$lib/components/Manhattan.svelte";
+    import VnGebouw from "$lib/components/VnGebouw.svelte";
 </script>
 
 <header></header>
 
-<div>
+<main>
     <WorldMap />
-</div>
+    <Verdeeldheid />
+    <NewYork />
+    <Manhattan />
+    <VnGebouw />
+</main>
 
 <style>
     @media screen and (width > 1rem) {
@@ -23,6 +31,13 @@
 
         :global(body) {
             background-color: #1a3761;
+        }
+
+        /* HEADER */
+        header {
+            width: 100vw;
+            height: 4em;
+            background-color: #efefef;
         }
 
         /* TITELS */
@@ -66,15 +81,25 @@
             font-weight: 400;
             font-size: 16pt;
             line-height: 20pt;
+
+            max-width: 40em;
         }
 
+        /* IMAGES */
+        :global(img) {
+            width: 80vw;
+            margin: 3em 0;
+        }
 
+        /* LIST ITEMS */
+        :global(li) {
+            list-style: none;
+        }
 
-        /* HEADER */
-        header {
-            width: 100vw;
-            height: 4em;
-            background-color: #efefef;
+        main {
+            display: flex;
+            flex-direction: column;
+            gap: 4em;
         }
     }
 
