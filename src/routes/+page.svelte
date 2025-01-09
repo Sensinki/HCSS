@@ -11,7 +11,9 @@
 <main>
     <WorldMap />
     <Verdeeldheid />
+    <div class="space"></div>
     <NewYork />
+    <div class="space"></div>
     <Manhattan />
     <VnGebouw />
 </main>
@@ -101,6 +103,12 @@
             flex-direction: column;
         }
 
+        /* SPACE BETWEEN COMPONENTS */
+        .space {
+            height: 20vh;
+            width: 100vw;
+            background-color: #efefef;
+        }
     }
 
     @media screen and (width > 38rem) {

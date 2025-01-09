@@ -47,7 +47,7 @@
             height: 0;
             border-left: 50vw solid transparent;
             border-right: 50vw solid transparent;
-            border-bottom: 40vh solid #efefef;
+            border-bottom: 30vh solid #efefef;
         }
         
         .component {
@@ -55,7 +55,7 @@
             justify-items: center;
             align-items: center;
 
-            padding: 0 2em;
+            padding: 0 3em;
             background-color: #efefef;
 
             img {
@@ -114,7 +114,7 @@
         }
     }
 
-    @media screen and (width > 52rem) {
+    @media screen and (width > 55rem) {
         .component {
             display: flex;
             flex-direction: row;
@@ -127,7 +127,7 @@
             }
 
             img {
-                max-width: 35em;
+                max-width: 30em;
                 justify-self: end;
             }
         }
