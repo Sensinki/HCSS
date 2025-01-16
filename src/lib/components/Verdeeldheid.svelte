@@ -2,17 +2,20 @@
 </script>
 
 <section>
-    <div id="arrow-start"></div>
     <section class="component">
         <img
             src="/images/verdeeldheid.png"
             alt="Verdeeldheid"
         />
         <section>
-            <h2>Verdeeldheid</h2>
+            <h1>Verdeeldheid</h1>
             <p>
-                Lorem ipsum dolor sit amet consectetur. Pellentesque enim neque nunc amet at. Id ac neque urna sit ornare mattis in. Fames praesent venenatis
-                erat commodo habitant eget. Et lorem morbi pellentesque arcu cursus malesuada lacus.
+                Bij elke resolutie wordt gestemd, en wij laten zien wie wat heeft gestemd. Om de verdeeldheid te tonen, wordt dit visueel weergegeven. Maar wat
+                bedoelen we met verdeeldheid?
+            </p>
+            <p>
+                Dit meten we met de coëfficiënt van variatie (CV), een maatstaf die laat zien hoe de stemmen (Ja, Nee en Abstain) verdeeld zijn. Een hoge CV
+                betekent grote verschillen in meningen, terwijl een lage CV juist op eensgezindheid wijst.
             </p>
 
             <!-- NA DESIGN VERANDEREN -->
@@ -42,14 +45,6 @@
 
 <style>
     @media screen and (width > 1rem) {
-        #arrow-start {
-            width: 0;
-            height: 0;
-            border-left: 50vw solid transparent;
-            border-right: 50vw solid transparent;
-            border-bottom: 30vh solid #efefef;
-        }
-        
         .component {
             display: grid;
             justify-items: center;
@@ -59,7 +54,7 @@
             background-color: #efefef;
 
             img {
-                max-width: 30em;
+                max-width: 15em;
                 justify-self: center;
             }
 
@@ -68,7 +63,7 @@
                 flex-direction: column;
                 gap: 1em;
                 width: 80vw;
-                max-width: 30em;
+                max-width: 40em;
 
                 /* NA DESIGN VERANDEREN  */
                 h5 {
@@ -120,15 +115,15 @@
             flex-direction: row;
             justify-content: center;
             align-items: center;
-            gap: 1em;
+            gap: 2em;
 
             section {
                 order: -1;
             }
 
             img {
-                max-width: 30em;
                 justify-self: end;
+                max-width: 30em;
             }
         }
     }

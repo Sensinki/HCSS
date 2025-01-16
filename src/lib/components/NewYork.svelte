@@ -74,14 +74,13 @@
             flex-direction: row;
             justify-content: center;
             align-items: center;
-            gap: 1em;
+            gap: 2em;
 
             section {
                 order: -1;
             }
 
             img {
-                max-width: 35em;
                 justify-self: end;
             }
         }

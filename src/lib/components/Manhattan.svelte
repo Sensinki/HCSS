@@ -42,19 +42,9 @@
         alt="Manhattan Map"
     />
 </section>
-    <div id="arrow-end"></div>
-
 
 <style>
     @media screen and (width > 1rem) {
-        #arrow-end {
-            width: 0;
-            height: 0;
-            border-left: 50vw solid transparent;
-            border-right: 50vw solid transparent;
-            border-top: 30vh solid #efefef;
-        }
-
         .component {
             display: grid;
             justify-items: center;
@@ -139,7 +129,6 @@
             }
 
             img {
-                max-width: 30em;
                 justify-self: end;
             }
         }
