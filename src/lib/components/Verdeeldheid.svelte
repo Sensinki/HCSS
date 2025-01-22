@@ -1,10 +1,32 @@
 <script>
+    import { onMount } from "svelte";
+
+    onMount(() => {
+        const listItems = document.querySelectorAll("ul li");
+
+        const observer = new IntersectionObserver(
+            (entries, observer) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animationPlayState = "running";
+                        observer.unobserve(entry.target); // Bir kez animasyon başladıktan sonra gözlemlemeyi bırak
+                    }
+                });
+            },
+            { threshold: 0.1 }
+        );
+
+        listItems.forEach((item) => {
+            item.style.animationPlayState = "paused"; // Animasyon başlangıçta duraklatılmış
+            observer.observe(item);
+        });
+    });
 </script>
 
 <section>
     <section class="component">
         <img
-            src="/images/verdeeldheid.png"
+            src="/images/landen-last-version.png"
             alt="Verdeeldheid"
         />
         <section>
@@ -18,27 +40,20 @@
                 betekent grote verschillen in meningen, terwijl een lage CV juist op eensgezindheid wijst.
             </p>
 
-            <!-- NA DESIGN VERANDEREN -->
-            <h5>Thema’s</h5>
             <ul>
                 <li>
-                    <div id="blauw"></div>
-                    <p>Defense & Security</p>
-                </li>
-                <li>
                     <div id="groen"></div>
-                    <p>Climate, Energy & Resources</p>
+                    <p>Yes</p>
                 </li>
                 <li>
-                    <div id="oranje"></div>
-                    <p>Cyber policy & Resilience</p>
+                    <div id="rood"></div>
+                    <p>No</p>
                 </li>
                 <li>
-                    <div id="geel"></div>
-                    <p>Geopolitics & Geo-economics</p>
+                    <div id="grijs"></div>
+                    <p>Abstain</p>
                 </li>
             </ul>
-            <!-- NA DESIGN VERANDEREN -->
         </section>
     </section>
 </section>
@@ -46,16 +61,22 @@
 <style>
     @media screen and (width > 1rem) {
         .component {
-            display: grid;
-            justify-items: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
             align-items: center;
+
+            gap: 1em;
 
             padding: 0 3em;
             background-color: #efefef;
 
             img {
-                max-width: 15em;
+                max-width: 10em;
                 justify-self: center;
+                margin-top: 2em;
+                opacity: 0;
+                animation: fadeIn 2s ease forwards;
             }
 
             section {
@@ -65,46 +86,62 @@
                 width: 80vw;
                 max-width: 40em;
 
-                /* NA DESIGN VERANDEREN  */
-                h5 {
-                    font-weight: 700;
-                    padding-top: 0.5em;
-                }
-
                 ul {
-                    display: flex;
-                    flex-direction: column;
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+                    justify-content: center;
+                    align-items: center;
                     gap: 0.5em;
+
+                    max-width: 25em;
 
                     li {
                         display: flex;
-                        flex-direction: row;
-                        gap: 0.5em;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 0.25em;
+
+                        opacity: 0;
+                        animation: fadeIn 0.8s ease forwards;
 
                         div {
-                            width: 1.5em;
+                            width: 100%;
+                            max-width: 7.5em;
                             height: 1.5em;
-                            border-radius: 1em;
-                        }
-
-                        #blauw {
-                            background-color: #82a0bc;
                         }
 
                         #groen {
-                            background-color: #a4a58d;
+                            background-color: #78ad5d;
                         }
 
-                        #oranje {
-                            background-color: #c48469;
+                        #rood {
+                            background-color: #c46969;
                         }
 
-                        #geel {
-                            background-color: #d79c5a;
+                        #grijs {
+                            background-color: #a9abb8;
                         }
                     }
+
+                    li:nth-of-type(1) {
+                        animation-delay: 0s;
+                    }
+                    li:nth-of-type(2) {
+                        animation-delay: 0.5s;
+                    }
+                    li:nth-of-type(3) {
+                        animation-delay: 1s;
+                    }
                 }
-                /* NA DESIGN VERANDEREN  */
+            }
+        }
+    }
+
+    @media screen and (width > 24rem) {
+        .component {
+            img {
+                max-width: 13em;
             }
         }
     }
@@ -123,8 +160,19 @@
 
             img {
                 justify-self: end;
-                max-width: 30em;
+                max-width: 25em;
             }
+        }
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
         }
     }
 </style>
