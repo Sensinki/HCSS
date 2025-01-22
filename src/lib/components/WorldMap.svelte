@@ -2,7 +2,7 @@
     import { onMount } from "svelte";
 
     let scrollY = 0;
-    let imageIndex = 1; 
+    let imageIndex = 1;
     let sectionIndex = 1;
 
     // Scroll event handler
@@ -10,15 +10,16 @@
         scrollY = window.scrollY;
 
         if (scrollY > window.innerHeight / 2) {
-            imageIndex = 2; 
+            imageIndex = 2;
         } else {
             imageIndex = 1;
         }
 
         if (scrollY > window.innerHeight / 2) {
-            sectionIndex = 2; 
+            sectionIndex = 2;
         } else {
-            sectionIndex = 1; }
+            sectionIndex = 1;
+        }
     }
 
     onMount(() => {
@@ -87,7 +88,7 @@
             height: 100vh;
             width: 100vw;
             scroll-snap-align: start;
-            padding: 0 2em;
+            padding: 2em;
         }
 
         .filled-component,
@@ -95,7 +96,6 @@
             position: sticky;
             top: 0;
         }
-        
 
         .images,
         .text {
@@ -104,6 +104,10 @@
             display: flex;
             justify-content: center;
             align-items: center;
+        }
+
+        .text {
+            color: antiquewhite;
         }
 
         img {
@@ -131,7 +135,7 @@
             padding-bottom: 0;
 
             opacity: 0;
-            transform: translateY(20px); 
+            transform: translateY(20px);
             transition:
                 opacity 0.5s ease,
                 transform 0.75s ease;
@@ -143,7 +147,7 @@
         .introduction.show,
         .g20.show {
             opacity: 1;
-            transform: translateY(0); 
+            transform: translateY(0);
         }
     }
 
