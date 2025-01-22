@@ -94,7 +94,6 @@
                 justify-content: center;
                 align-items: center;
                 width: 100vw;
-                order: 2;
                 overflow: hidden;
             }
 
@@ -109,7 +108,6 @@
                 width: unset;
                 max-width: 40em;
                 overflow: hidden;
-                z-index: 2;
             }
         }
     }

@@ -164,7 +164,7 @@
         /* IMAGES */
         :global(img) {
             width: 80vw;
-            /* z-index: 2; */
+            z-index: 2;
 
             /* margin: 2em 0; */
         }
