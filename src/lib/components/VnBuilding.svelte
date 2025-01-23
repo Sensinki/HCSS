@@ -13,15 +13,13 @@
         if (index < text.length) {
             displayedText += text.charAt(index);
             index++;
-            setTimeout(typeEffect, 100); // Her harf arası 100 ms
+            setTimeout(typeEffect, 100); 
         } else {
-            // Yazma efekti bitince diğer animasyonları başlat
             startOtherAnimations();
         }
     }
 
     function startOtherAnimations() {
-        // Diğer animasyonları başlatmak için sınıf ekleyin
         animationStarted = true;
     }
 
@@ -31,7 +29,7 @@
                 entries.forEach((entry) => {
                     if (entry.isIntersecting) {
                         isVisible = true;
-                        typeEffect(); // Yazma efekti başlayacak
+                        typeEffect(); 
                         observer.disconnect();
                     }
                 });

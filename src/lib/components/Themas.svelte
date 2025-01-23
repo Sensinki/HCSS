@@ -9,7 +9,7 @@
                 entries.forEach((entry) => {
                     if (entry.isIntersecting) {
                         entry.target.style.animationPlayState = "running";
-                        observer.unobserve(entry.target); // Bir kez animasyon başladıktan sonra gözlemlemeyi bırak
+                        observer.unobserve(entry.target);
                     }
                 });
             },
@@ -17,7 +17,7 @@
         );
 
         listItems.forEach((item) => {
-            item.style.animationPlayState = "paused"; // Animasyon başlangıçta duraklatılmış
+            item.style.animationPlayState = "paused";
             observer.observe(item);
         });
     });
@@ -37,12 +37,6 @@
                 thema’s zien, zodat je kunt ontdekken waar de meeste verdeeldheid zit.
             </p>
         </section>
-
-        <!-- THEMA'S ZELF NAMAKEN -->
-        <!-- <img
-            src="/images/thema-blok.png"
-            alt="Thema's"
-        /> -->
 
         <ul>
             <li>
@@ -101,12 +95,6 @@
             padding: 0 3em;
             background-color: #efefef;
 
-            /* img {
-                max-width: 10em;
-                justify-self: center;
-                align-self: self-start;
-            } */
-
             section {
                 display: flex;
                 flex-direction: column;
@@ -144,8 +132,8 @@
 
                 padding: 0.25em;
 
-                opacity: 0; /* Başlangıçta görünmez */
-                animation: fadeIn 0.8s ease forwards; /* Animasyon tanımı */
+                opacity: 0;
+                animation: fadeIn 0.8s ease forwards;
 
                 p {
                     font-weight: bold;
@@ -180,9 +168,6 @@
 
     @media screen and (width > 24rem) {
         .component {
-            /* img {
-                max-width: 12.5em;
-            } */
             ul {
                 max-width: 60vw;
                 max-height: 40vh;
@@ -212,13 +197,6 @@
                 max-height: 80vh;
                 padding: 1em;
             }
-
-            /* img {
-                justify-self: end;
-                align-self: center;
-
-                max-width: 20em;
-            } */
         }
     }
 

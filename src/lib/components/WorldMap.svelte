@@ -5,7 +5,6 @@
     let imageIndex = 1;
     let sectionIndex = 1;
 
-    // Scroll event handler
     function handleScroll() {
         scrollY = window.scrollY;
 

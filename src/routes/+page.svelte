@@ -108,14 +108,6 @@
             height: 100vh;
         }
 
-        /* HEADER */
-        /* later */
-        /* :global(header) {
-            width: 100vw;
-            height: 4em;
-            background-color: #efefef;
-        } */
-
         /* TITELS */
         :global(h1) {
             font-weight: 600;
@@ -166,7 +158,6 @@
             width: 80vw;
             z-index: 2;
 
-            /* margin: 2em 0; */
         }
 
         /* LIST ITEMS */

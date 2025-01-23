@@ -9,7 +9,7 @@
                 entries.forEach((entry) => {
                     if (entry.isIntersecting) {
                         entry.target.style.animationPlayState = "running";
-                        observer.unobserve(entry.target); // Bir kez animasyon başladıktan sonra gözlemlemeyi bırak
+                        observer.unobserve(entry.target); 
                     }
                 });
             },
@@ -17,7 +17,7 @@
         );
 
         listItems.forEach((item) => {
-            item.style.animationPlayState = "paused"; // Animasyon başlangıçta duraklatılmış
+            item.style.animationPlayState = "paused"; 
             observer.observe(item);
         });
     });
