@@ -1,41 +1,37 @@
 
-## Developing
+# HCSS Project
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+## How to install 📦
+1. Create a folder
+That helps you to place this project in your computer so you can easily navigate through it.
 
+2. Clone this repository
+You can clone the application from CLI or install it by downloading the ZIP file. To clone, you can paste the following code into the CLI you are using:
+
+HTTPS
 ```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+git clone https://github.com/Sensinki/HCSS.git
 ```
 
-Everything inside `src/lib` is part of your library, everything inside `src/routes` can be used as a showcase or preview app.
-
-## Building
-
-To build your library:
-
+or SSH
 ```bash
-npm run package
+git clone git@github.com:Sensinki/HCSS.git
 ```
 
-To create a production version of your showcase app:
+3. Install dependencies
+Now you have all documents but you can not run the code without dependencies. I used npm, you can install npm by copying the following code to the CLI.
+
+You can check my "package.json" file if you want to see all of my dependensies and devDependensies.
 
 ```bash
-npm run build
+npm install
 ```
 
-You can preview the production build with `npm run preview`.
+4. .env file
+As last final step, you should set your .env file if you need it.
 
-<!-- > To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment. -->
+5. Run the project
+Now you can run the project. Write your terminal npm run dev.
 
-## Publishing
+To check the connection you can go to your browser and write "localhost:5173". If there is no problem, you should see the the app.
 
-Go into the `package.json` and give your package the desired name through the `"name"` option. Also consider adding a `"license"` field and point it to a `LICENSE` file which you can create from a template (one popular option is the [MIT license](https://opensource.org/license/mit/)).
-
-To publish your library to [npm](https://www.npmjs.com):
-
-```bash
-npm publish
-```
