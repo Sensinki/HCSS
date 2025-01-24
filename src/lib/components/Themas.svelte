@@ -29,12 +29,8 @@
             <h1>Thema's</h1>
 
             <p>
-                We kijken naar zes thema’s waarin de G20 heeft gestemd over verschillende resoluties. Maar wat bedoelen we met een thema? Een thema bevat
-                resoluties die over hetzelfde onderwerp gaan.
-            </p>
-            <p>
-                Neem bijvoorbeeld het thema Economics: daarin staan resoluties die te maken hebben met geldzaken of vergelijkbare onderwerpen. We laten alle zes
-                thema’s zien, zodat je kunt ontdekken waar de meeste verdeeldheid zit.
+                Ontdek hoe de G20 stemt over belangrijke thema's en waar de grootste verschillen liggen. Dit gebeurt in het VN-gebouw, waar landen stemmen over
+                resoluties die de wereld vormgeven.
             </p>
         </section>
 
@@ -99,8 +95,7 @@
                 display: flex;
                 flex-direction: column;
                 gap: 1em;
-                width: 80vw;
-                max-width: 40em;
+                width: 27em;
             }
 
             img {
@@ -123,7 +118,7 @@
 
             li {
                 display: grid;
-                grid-template-columns: max-content 1fr;
+                grid-template-columns: max-content 7em;
                 grid-template-rows: 1fr;
 
                 justify-content: center;
@@ -181,11 +176,7 @@
             flex-direction: row;
             justify-content: center;
             align-items: center;
-            gap: 3em;
-
-            section {
-                order: -1;
-            }
+            gap: 5em;
 
             img {
                 width: 4em;

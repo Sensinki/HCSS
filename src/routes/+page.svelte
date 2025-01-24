@@ -37,6 +37,11 @@
         src="/images/gina.png"
         alt="Gina Diplomatic"
     />
+    <!-- <img
+        src="/images/visual-bottomright.png"
+        alt="visual"
+        class="animation"
+    /> -->
 </main>
 
 <style>
@@ -68,7 +73,7 @@
             opacity: 0.65;
         }
 
-        img {
+        img:nth-of-type(1) {
             position: fixed;
             top: 20vh;
             left: 5vw;
@@ -77,6 +82,19 @@
             z-index: 0;
             animation: moveBackground 10s cubic-bezier(0.42, 0, 0.58, 1) infinite;
         }
+
+        /* img:nth-of-type(2) {
+            position: fixed;
+            bottom: -3em;
+            right: -4em;
+            width: 40em;
+            height: auto;
+
+            opacity: 0.1;
+
+            z-index: 0;
+            animation: moveBackground 10s cubic-bezier(0.42, 0, 0.58, 1) infinite reverse;
+        } */
 
         /* GLOBAL */
         :global(*) {
@@ -135,7 +153,7 @@
         :global(h5) {
             font-weight: 600;
             font-size: 20pt;
-            line-height: 14pt;
+            line-height: 18pt;
         }
 
         /* voor citaten */
@@ -157,7 +175,6 @@
         :global(img) {
             width: 80vw;
             z-index: 2;
-
         }
 
         /* LIST ITEMS */

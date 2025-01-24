@@ -100,6 +100,7 @@
                 max-width: 40em;
                 font-size: 20pt;
                 line-height: 24pt;
+                text-align: center;
             }
 
             img {

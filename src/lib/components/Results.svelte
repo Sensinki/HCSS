@@ -28,11 +28,8 @@
         <section>
             <h1>Resultaten</h1>
 
-            <p>
-                De resultaten laten zien hoe de landen in de G20 hebben gestemd over een resolutie en geven inzicht in de mate van eensgezindheid of
-                verdeeldheid.
-            </p>
-            <p>Door deze uitslagen te bekijken, kun je zien waar landen overeenstemming vinden en waar spanningen of verschillen bestaan.</p>
+            <p>Met data van Gina Diplomatic analyseren we hoe de G20 stemt over VN-resoluties.</p>
+            <p>De resultaten tonen de mate van eensgezindheid of verdeeldheid.</p>
         </section>
 
         <section class="image-container">
@@ -78,18 +75,18 @@
                 animation: fadeIn 2.5s ease forwards;
             }
 
-            section {
+            section:nth-of-type(1) {
                 display: flex;
                 flex-direction: column;
                 gap: 1em;
                 width: 80vw;
-                max-width: 40em;
+                max-width: 30em;
             }
 
             section:nth-of-type(2) {
                 position: relative;
                 width: fit-content;
-                margin: auto;
+                /* margin: auto; */
             }
 
             .main-image {
@@ -128,7 +125,7 @@
     @media screen and (width > 24rem) {
         .component {
             img {
-                max-width: 12.5em;
+                max-width: 15em;
             }
         }
     }
@@ -139,7 +136,7 @@
             flex-direction: row;
             justify-content: center;
             align-items: center;
-            gap: 3em;
+            gap: 5em;
 
             section {
                 order: -1;
@@ -153,7 +150,7 @@
             }
 
             .main-image {
-                max-width: 20em;
+                max-width: 25em;
             }
         }
     }

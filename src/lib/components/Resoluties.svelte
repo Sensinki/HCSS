@@ -9,7 +9,7 @@
                 entries.forEach((entry) => {
                     if (entry.isIntersecting) {
                         entry.target.style.animationPlayState = "running";
-                        observer.unobserve(entry.target); 
+                        observer.unobserve(entry.target);
                     }
                 });
             },
@@ -17,7 +17,7 @@
         );
 
         listItems.forEach((item) => {
-            item.style.animationPlayState = "paused"; 
+            item.style.animationPlayState = "paused";
             observer.observe(item);
         });
     });
@@ -28,11 +28,7 @@
         <section>
             <h1>Resoluties</h1>
 
-            <p>
-                Resoluties zijn officiële besluiten of uitspraken die door een organisatie, zoals de Verenigde Naties (VN), worden aangenomen. Ze kunnen over
-                allerlei onderwerpen gaan, waaronder de zes thema’s die we bespreken.
-            </p>
-            <p>De G20-leden stemmen hierover, en afhankelijk van de uitkomst kan een resolutie worden aangenomen.</p>
+            <p>Resoluties zijn officiële besluiten of uitspraken waarover gestemd wordt. Ze hebben betrekking op uiteenlopende onderwerpen in de thema’s.</p>
         </section>
 
         <img
@@ -65,7 +61,7 @@
                 flex-direction: column;
                 gap: 1em;
                 width: 80vw;
-                max-width: 40em;
+                max-width: 30em;
             }
         }
     }
@@ -73,7 +69,7 @@
     @media screen and (width > 24rem) {
         .component {
             img {
-                max-width: 12.5em;
+                max-width: 15em;
             }
         }
     }
@@ -84,7 +80,7 @@
             flex-direction: row;
             justify-content: center;
             align-items: center;
-            gap: 3em;
+            gap: 5em;
 
             section {
                 order: -1;
@@ -94,7 +90,7 @@
                 justify-self: end;
                 align-self: center;
 
-                max-width: 20em;
+                max-width: 25em;
             }
         }
     }

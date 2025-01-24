@@ -9,7 +9,7 @@
                 entries.forEach((entry) => {
                     if (entry.isIntersecting) {
                         entry.target.style.animationPlayState = "running";
-                        observer.unobserve(entry.target); 
+                        observer.unobserve(entry.target);
                     }
                 });
             },
@@ -17,7 +17,7 @@
         );
 
         listItems.forEach((item) => {
-            item.style.animationPlayState = "paused"; 
+            item.style.animationPlayState = "paused";
             observer.observe(item);
         });
     });
@@ -32,13 +32,14 @@
         <section>
             <h1>Verdeeldheid</h1>
             <p>
-                Bij elke resolutie wordt gestemd, en wij laten zien wie wat heeft gestemd. Om de verdeeldheid te tonen, wordt dit visueel weergegeven. Maar wat
-                bedoelen we met verdeeldheid?
+                Bij elke resolutie wordt gestemd, en de resultaten laten zien wie voor, tegen of zich onthouden heeft. De verdeeldheid wordt visueel weergegeven
+                en gemeten met de coëfficiënt van variatie (CV).
             </p>
-            <p>
-                Dit meten we met de coëfficiënt van variatie (CV), een maatstaf die laat zien hoe de stemmen (Ja, Nee en Abstain) verdeeld zijn. Een hoge CV
-                betekent grote verschillen in meningen, terwijl een lage CV juist op eensgezindheid wijst.
-            </p>
+            <ul>
+                <li>Hoge CV betekent sterke verdeeldheid</li>
+                <li>Lage CV meer overeenstemming</li>
+            </ul>
+            <p>De stemmen worden weergegeven met Yes, No en Abstain.</p>
 
             <ul>
                 <li>
@@ -86,7 +87,14 @@
                 width: 80vw;
                 max-width: 40em;
 
-                ul {
+                ul:nth-of-type(1) {
+                    li {
+                        list-style: inside;
+                        padding-left: 1em;
+                        font-weight: bold;
+                    }
+                }
+                ul:nth-of-type(2) {
                     display: grid;
                     grid-template-columns: 1fr 1fr 1fr;
                     justify-content: center;

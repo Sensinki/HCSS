@@ -50,31 +50,32 @@
                 class="introduction"
                 class:show={sectionIndex === 1}
             >
-                <h1>Introductie</h1>
-                <p>
-                    De Verenigde Naties is een plek waar alle landen samenkomen om bij thema’s verschillende resolutie te bespreken. Niet elk land is het met
-                    elkaar eens dus wordt er over de verschillende resoluties gestemd. Maar op wat kun je stemmen en wat veroorzaakt de meeste verdeeldheid?
-                </p>
+                <h1>Welke thema's veroorzaken de meeste verdeeldheid binnen de G20 in stemgedrag binnen de VN?</h1>
             </section>
             <section
                 class="g20"
                 class:show={sectionIndex === 2}
             >
-                <h1>G20</h1>
-                <p>
-                    We kijken hier naar de g20. Een bondgenootschap bestaande uit 19 landen, de Europese Unie en de Afrikaanse Unie. Samen vertegenwoordigen ze
-                    de grootste economieën ter wereld. Samen staan de G20-landen voor ongeveer twee derde van de wereldbevolking, 85% van de wereldwijde
-                    inkomsten (bbp), en ruim 75% van de wereldhandel.
-                </p>
-                <p>
-                    Deze groep komt elk jaar samen om economische onderwerpen te bespreken. We gaan kijken naar de verdeeldheid tussen de G20 landen die stemmen
-                    over de verschillende vraagstukken in de verschillende thema’s.
-                </p>
+                <section>
+                    <h1>G20</h1>
+                    <p>De Groep van 20. De G20 bestaat uit de grootste economieën ter wereld. Een invloedrijk blok dat samen 2/3 van de wereldbevolking,</p>
+                    <p class="quote">“Een enorme economische en politieke macht”</p>
+                    <p>Maar hoe stemmen deze landen over belangrijke resoluties binnen de Verenigde Naties? En waar liggen de grootste verschillen?</p>
+                </section>
+                <section class="outlined">
+                    <h5>85% van het mondiale bbp</h5>
+                    <h5>Vertegenwoordigd de wereldhandel meer dan 75%</h5>
+                </section>
             </section>
         </section>
     </section>
     <section class="empty-component"></section>
 </section>
+<img
+    src="/images/visual-bottomright.png"
+    alt="visual"
+    class="animation"
+/>
 
 <style>
     @media screen and (width > 1rem) {
@@ -105,8 +106,24 @@
             align-items: center;
         }
 
+        .animation {
+            position: sticky;
+            top: unset;
+            bottom: -6em;
+            right: unset;
+            left: 60em;
+            width: 40em;
+            height: auto;
+
+            opacity: 0.35 !important;
+
+            z-index: 0;
+            animation: moveBackground 10s cubic-bezier(0.42, 0, 0.58, 1) infinite reverse;
+        }
+
         .text {
             color: antiquewhite;
+            position: relative;
         }
 
         img {
@@ -114,7 +131,7 @@
             top: 0;
             object-fit: cover;
             z-index: 1;
-            max-width: 45em;
+            max-width: 40em;
             transition: opacity 0.75s ease;
         }
 
@@ -127,7 +144,6 @@
             position: absolute;
             top: 55vw;
             display: flex;
-            flex-direction: column;
             gap: 0.5em;
             width: 80vw;
             max-width: 45em;
@@ -139,28 +155,106 @@
                 opacity 0.5s ease,
                 transform 0.75s ease;
         }
-        .introduction {
-            top: 40vh;
-        }
 
         .introduction.show,
         .g20.show {
             opacity: 1;
             transform: translateY(0);
         }
+
+        .introduction {
+            top: 35vh;
+            flex-direction: row;
+        }
+
+        .g20 {
+            gap: 1em;
+            flex-direction: column;
+        }
+
+        p {
+            font-size: 12pt;
+            line-height: 16pt;
+            max-width: 30em;
+        }
+        .quote {
+            font-weight: bold;
+            padding: 1em 0;
+        }
+
+        .outlined {
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+            justify-content: center;
+            max-width: 40em;
+
+            h5 {
+                padding: 0.5em;
+                border: 2px solid #efefef;
+            }
+        }
+
+        /* .outlined {
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+            justify-content: end;
+
+            h5 {
+                padding: 1em;
+                border: 2px solid #efefef;
+            }
+        } */
     }
 
     @media screen and (width > 38rem) {
         .introduction,
         .g20 {
-            top: 52vw;
+            top: 48vw;
+        }
+
+        .g20 {
+            gap: 2em;
+            flex-direction: row;
+        }
+
+        .outlined {
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+            justify-content: start;
+            max-width: 20em;
+
+            h5 {
+                padding: 1em;
+            }
         }
     }
 
     @media screen and (width > 57rem) {
         .introduction,
         .g20 {
-            top: 58vh;
+            top: 50vh;
+        }
+    }
+
+    /* ANIMATIONS */
+    @keyframes moveBackground {
+        0% {
+            transform: translate(0, 0);
+        }
+        25% {
+            transform: translate(5px, -5px);
+        }
+        50% {
+            transform: translate(10px, 5px);
+        }
+        75% {
+            transform: translate(5px, 10px);
+        }
+        100% {
+            transform: translate(0, 0);
         }
     }
 </style>
