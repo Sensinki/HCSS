@@ -63,7 +63,7 @@
                 </section>
                 <section class="numbers">
                     <h2>19+ countries</h2>
-                    <h2>2 <br> unions</h2>
+                    <h2>2 unions</h2>
                 </section>
             </section>
         </section>
@@ -84,10 +84,17 @@
             width: max-content;
             display: flex;
             flex-direction: column;
+            justify-content: center;
+            align-items: center;
             gap: 2em;
         }
         .component h2 {
             font-size: 10vw;
+            width: max-content;
+            text-wrap: wrap;
+        }
+        .component h2:nth-of-type(2) {
+            width: 4em;
         }
 
         .component > section {
@@ -178,7 +185,6 @@
             font-weight: bold;
             padding: 1em 0;
         }
-
     }
 
     @media screen and (width > 38rem) {
@@ -202,7 +208,9 @@
             font-size: 42pt;
             width: 4em;
         }
-
+        .component h2:nth-of-type(2) {
+            width: 3.5em;
+        }
     }
 
     @media screen and (width > 57rem) {

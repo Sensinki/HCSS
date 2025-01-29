@@ -7,6 +7,7 @@
     import VnBuilding from "$lib/components/VnBuilding.svelte";
 
     import { isScrollingDown, isScrollingUp, isScrolling } from "../stores/scroll.js";
+    import G20 from "$lib/components/G20.svelte";
 </script>
 
 <header></header>
@@ -14,6 +15,8 @@
 <main>
     <WorldMap />
     <div id="arrow-start"></div>
+
+    <G20 />
 
     <Verdeeldheid />
     <div class="space"></div>
