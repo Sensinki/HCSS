@@ -89,7 +89,6 @@
             align-items: center;
 
             padding: 0 3em;
-            background-color: #efefef;
 
             section {
                 display: flex;

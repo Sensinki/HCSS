@@ -33,15 +33,15 @@
         href="/"
         class:hide={$isScrolling || $isScrollingUp}>Go to treemap</a
     >
-    <img
+    <!-- <img
         src="/images/gina.png"
         alt="Gina Diplomatic"
-    />
-    <!-- <img
+    /> -->
+    <img
         src="/images/visual-bottomright.png"
         alt="visual"
         class="animation"
-    /> -->
+    />
 </main>
 
 <style>
@@ -73,14 +73,30 @@
             opacity: 0.65;
         }
 
-        img:nth-of-type(1) {
+        /* img:nth-of-type(1) {
             position: fixed;
             top: 20vh;
             left: 5vw;
             width: 85vw;
+            opacity: .5;
 
             z-index: 0;
             animation: moveBackground 10s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+        } */
+
+        .animation {
+            position: sticky;
+            top: unset;
+            bottom: -6em;
+            right: unset;
+            left: 100em;
+            width: 40em;
+            height: auto;
+
+            opacity: 0.35 !important;
+
+            z-index: -2;
+            animation: moveBackground 10s cubic-bezier(0.42, 0, 0.58, 1) infinite reverse;
         }
 
         /* img:nth-of-type(2) {
@@ -104,10 +120,12 @@
             font-family: "neue-haas-grotesk-display", Arial, Helvetica, sans-serif;
             font-weight: 400;
             font-style: normal;
+            color: #efefef;
         }
 
         :global(body) {
             background-color: #1a3761;
+            overflow-x: hidden;
         }
 
         /* scroll snap */
@@ -191,30 +209,29 @@
         .space {
             height: 20vh;
             width: 100vw;
-            background-color: #efefef;
         }
 
         .line {
             height: 20vh;
             width: 100vw;
-            background-color: #efefef;
             display: flex;
             justify-content: center;
+            align-items: center;
         }
         .line div {
             height: 15vh;
             width: 0.3em;
-            background-color: #1a3761;
+            background-color: #efefef;
             border-radius: 0.5em;
         }
 
-        #arrow-start {
+        /* #arrow-start {
             width: 0;
             height: 0;
             border-left: 50vw solid transparent;
             border-right: 50vw solid transparent;
             border-bottom: 30vh solid #efefef;
-        }
+        } */
     }
 
     @media screen and (width > 24rem) {
@@ -243,13 +260,13 @@
             transform: translate(0, 0);
         }
         25% {
-            transform: translate(5px, -5px);
+            transform: translate(.5em, -0.5em);
         }
         50% {
-            transform: translate(10px, 5px);
+            transform: translate(1em, -0.5em);
         }
         75% {
-            transform: translate(5px, 10px);
+            transform: translate(.5em, 1em);
         }
         100% {
             transform: translate(0, 0);

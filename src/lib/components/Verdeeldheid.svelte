@@ -70,7 +70,6 @@
             gap: 1em;
 
             padding: 0 3em;
-            background-color: #efefef;
 
             img {
                 max-width: 10em;

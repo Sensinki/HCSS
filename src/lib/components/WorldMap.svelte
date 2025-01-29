@@ -37,7 +37,6 @@
                 alt="World Map"
                 class:show={imageIndex === 1}
             />
-
             <img
                 src="/images/landen-wit.png"
                 alt="G20 Countries"
@@ -50,38 +49,45 @@
                 class="introduction"
                 class:show={sectionIndex === 1}
             >
-                <h1>Welke thema's veroorzaken de meeste verdeeldheid binnen de G20 in stemgedrag binnen de VN?</h1>
+                <h1>Which issues cause the most division within the G20 in voting behavior at the UN?</h1>
             </section>
             <section
                 class="g20"
                 class:show={sectionIndex === 2}
             >
                 <section>
-                    <h1>G20</h1>
-                    <p>De Groep van 20. De G20 bestaat uit de grootste economieën ter wereld. Een invloedrijk blok dat samen 2/3 van de wereldbevolking,</p>
-                    <p class="quote">“Een enorme economische en politieke macht”</p>
-                    <p>Maar hoe stemmen deze landen over belangrijke resoluties binnen de Verenigde Naties? En waar liggen de grootste verschillen?</p>
+                    <h1>The Group Of 20</h1>
+                    <p>The G20 consists of the largest economies in the world. An influential bloc that together represents 2/3 of the world's population,</p>
+                    <p class="quote">“A huge economic and political power”</p>
+                    <p>But how do these countries vote on important resolutions within the United Nations? And where are the biggest differences?</p>
                 </section>
-                <section class="outlined">
-                    <h5>85% van het mondiale bbp</h5>
-                    <h5>Vertegenwoordigd de wereldhandel meer dan 75%</h5>
+                <section class="numbers">
+                    <h2>19+ countries</h2>
+                    <h2>2 <br> unions</h2>
                 </section>
             </section>
         </section>
     </section>
     <section class="empty-component"></section>
 </section>
-<img
-    src="/images/visual-bottomright.png"
-    alt="visual"
-    class="animation"
-/>
 
 <style>
     @media screen and (width > 1rem) {
         .component {
             height: 200vh;
             position: relative;
+        }
+        .numbers {
+            position: absolute;
+            top: -45vw;
+            text-align: center;
+            width: max-content;
+            display: flex;
+            flex-direction: column;
+            gap: 2em;
+        }
+        .component h2 {
+            font-size: 10vw;
         }
 
         .component > section {
@@ -99,31 +105,15 @@
 
         .images,
         .text {
-            position: sticky;
+            position: relative;
             width: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
-        .animation {
-            position: sticky;
-            top: unset;
-            bottom: -6em;
-            right: unset;
-            left: 60em;
-            width: 40em;
-            height: auto;
-
-            opacity: 0.35 !important;
-
-            z-index: 0;
-            animation: moveBackground 10s cubic-bezier(0.42, 0, 0.58, 1) infinite reverse;
-        }
-
-        .text {
-            color: antiquewhite;
-            position: relative;
+        h1 {
+            text-align: center;
         }
 
         img {
@@ -144,6 +134,8 @@
             position: absolute;
             top: 55vw;
             display: flex;
+            justify-content: center;
+            align-items: center;
             gap: 0.5em;
             width: 80vw;
             max-width: 45em;
@@ -170,6 +162,10 @@
         .g20 {
             gap: 1em;
             flex-direction: column;
+
+            h1 {
+                padding: 0 0 0.5em 0;
+            }
         }
 
         p {
@@ -177,35 +173,12 @@
             line-height: 16pt;
             max-width: 30em;
         }
+
         .quote {
             font-weight: bold;
             padding: 1em 0;
         }
 
-        .outlined {
-            display: flex;
-            flex-direction: column;
-            gap: 1em;
-            justify-content: center;
-            max-width: 40em;
-
-            h5 {
-                padding: 0.5em;
-                border: 2px solid #efefef;
-            }
-        }
-
-        /* .outlined {
-            display: flex;
-            flex-direction: column;
-            gap: 1em;
-            justify-content: end;
-
-            h5 {
-                padding: 1em;
-                border: 2px solid #efefef;
-            }
-        } */
     }
 
     @media screen and (width > 38rem) {
@@ -219,23 +192,28 @@
             flex-direction: row;
         }
 
-        .outlined {
-            display: flex;
-            flex-direction: column;
-            gap: 1em;
-            justify-content: start;
-            max-width: 20em;
-
-            h5 {
-                padding: 1em;
-            }
+        .numbers {
+            top: -30vw;
+            flex-direction: row;
+            gap: 3em;
         }
+
+        .component h2 {
+            font-size: 42pt;
+            width: 4em;
+        }
+
     }
 
     @media screen and (width > 57rem) {
         .introduction,
         .g20 {
             top: 50vh;
+        }
+
+        .numbers {
+            top: -22vw;
+            gap: 3em;
         }
     }
 
