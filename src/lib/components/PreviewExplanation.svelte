@@ -3,7 +3,7 @@
 
 <section class="component">
     <section>
-        <h1>Which issues cause the most division within the G20 in voting behavior at the UN?</h1>
+        <h1>In this visualization we take you through the UN building and show how divisions within the G20 are visible.</h1>
     </section>
 </section>
 

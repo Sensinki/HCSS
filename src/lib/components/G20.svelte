@@ -65,7 +65,7 @@
     .marquee-wrapper {
         display: flex;
         width: max-content;
-        animation: scroll 15s linear infinite;
+        animation: scroll 25s linear infinite;
     }
 
     .marquee-content {

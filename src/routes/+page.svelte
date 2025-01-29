@@ -8,6 +8,8 @@
 
     import { isScrollingDown, isScrollingUp, isScrolling } from "../stores/scroll.js";
     import G20 from "$lib/components/G20.svelte";
+    import VotingBehaviour from "$lib/components/VotingBehaviour.svelte";
+    import PreviewExplanation from "$lib/components/PreviewExplanation.svelte";
 </script>
 
 <header></header>
@@ -17,6 +19,13 @@
     <div id="arrow-start"></div>
 
     <G20 />
+    <div class="space"></div>
+
+    <VotingBehaviour />
+    <div class="space"></div>
+
+    <PreviewExplanation />
+    <div class="space"></div>
 
     <Verdeeldheid />
     <div class="space"></div>
@@ -45,6 +54,7 @@
         alt="visual"
         class="animation"
     />
+
 </main>
 
 <style>
@@ -263,13 +273,13 @@
             transform: translate(0, 0);
         }
         25% {
-            transform: translate(.5em, -0.5em);
+            transform: translate(0.5em, -0.5em);
         }
         50% {
             transform: translate(1em, -0.5em);
         }
         75% {
-            transform: translate(.5em, 1em);
+            transform: translate(0.5em, 1em);
         }
         100% {
             transform: translate(0, 0);
