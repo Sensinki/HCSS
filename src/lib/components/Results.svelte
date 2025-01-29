@@ -2,7 +2,7 @@
     import { onMount } from "svelte";
 
     onMount(() => {
-        const listItems = document.querySelectorAll("img");
+        const listItems = document.querySelectorAll("ul li");
 
         const observer = new IntersectionObserver(
             (entries, observer) => {
@@ -26,33 +26,29 @@
 <section>
     <section class="component">
         <section>
-            <h1>Resultaten</h1>
+            <h1>Results</h1>
+            <p>The results of the resolutions show how the G20 divides or agrees. This is shown in Yes, No or Abstain</p>
+            <p>Zooming in gives you insight into how decision-making works and where divisions occur</p>
 
-            <p>Met data van Gina Diplomatic analyseren we hoe de G20 stemt over VN-resoluties.</p>
-            <p>De resultaten tonen de mate van eensgezindheid of verdeeldheid.</p>
-        </section>
-
-        <section class="image-container">
             <img
                 src="/images/results.png"
-                alt="Results"
-                class="main-image"
+                alt="Verdeeldheid"
             />
-            <img
-                src="/images/vlaggen.svg"
-                alt="Flag 1"
-                class="overlay-image overlay-image-1"
-            />
-            <img
-                src="/images/vlaggen.svg"
-                alt="Flag 2"
-                class="overlay-image overlay-image-2"
-            />
-            <img
-                src="/images/vlaggen.svg"
-                alt="Flag 3"
-                class="overlay-image overlay-image-3"
-            />
+
+            <ul>
+                <li>
+                    <div id="groen"></div>
+                    <p>Yes</p>
+                </li>
+                <li>
+                    <div id="rood"></div>
+                    <p>No</p>
+                </li>
+                <li>
+                    <div id="grijs"></div>
+                    <p>Abstain</p>
+                </li>
+            </ul>
         </section>
     </section>
 </section>
@@ -60,63 +56,82 @@
 <style>
     @media screen and (width > 1rem) {
         .component {
-            display: grid;
-            justify-items: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
             align-items: center;
+
+            gap: 1em;
 
             padding: 0 3em;
 
             img {
-                max-width: 10em;
+                max-width: 15em;
                 justify-self: center;
-                align-self: self-start;
+                align-self: center;
+                margin-top: 2em;
                 opacity: 0;
-                animation: fadeIn 2.5s ease forwards;
+                animation: fadeIn 2s ease forwards;
             }
 
-            section:nth-of-type(1) {
+            section {
                 display: flex;
                 flex-direction: column;
+                justify-items: center;
+                align-items: center;
                 gap: 1em;
                 width: 80vw;
-                max-width: 30em;
+                max-width: 40em;
+
+                ul:nth-of-type(1) {
+                    li {
+                        list-style: inside;
+                        /* padding-left: 1em; */
+                        font-weight: bold;
+                    }
+                }
+                ul {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+                    justify-content: center;
+                    align-items: center;
+                    gap: .75em;
+                    padding-top: 1.5em;
+
+                    max-width: 25em;
+
+                    li {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 0.25em;
+
+                        opacity: 0;
+                        animation: fadeIn 0.8s ease forwards;
+
+                        div {
+                            width: 100%;
+                            max-width: 7.5em;
+                            height: 1.5em;
+                            background-color: #efefef;
+                        }
+                    }
+
+                    li:nth-of-type(1) {
+                        animation-delay: 0s;
+                    }
+                    li:nth-of-type(2) {
+                        animation-delay: 0.5s;
+                    }
+                    li:nth-of-type(3) {
+                        animation-delay: 1s;
+                    }
+                }
             }
 
-            section:nth-of-type(2) {
-                position: relative;
-                width: fit-content;
-                /* margin: auto; */
-            }
-
-            .main-image {
-                display: block;
-                max-width: 15em;
-            }
-
-            .overlay-image {
-                position: absolute;
-                max-width: 60%;
-                top: 0;
-                left: 0;
-                z-index: 3;
-            }
-
-            .overlay-image-1 {
-                top: 10%;
-                left: 20%;
-                animation-delay: 0.5s;
-            }
-
-            .overlay-image-2 {
-                top: 42%;
-                left: 20%;
-                animation-delay: 1s;
-            }
-
-            .overlay-image-3 {
-                top: 75%;
-                left: 20%;
-                animation-delay: 1.5s;
+            h1 {
+                margin-bottom: 0.5em;
             }
         }
     }
@@ -124,7 +139,7 @@
     @media screen and (width > 24rem) {
         .component {
             img {
-                max-width: 15em;
+                max-width: 20em;
             }
         }
     }
@@ -135,7 +150,7 @@
             flex-direction: row;
             justify-content: center;
             align-items: center;
-            gap: 5em;
+            gap: 2em;
 
             section {
                 order: -1;
@@ -143,12 +158,6 @@
 
             img {
                 justify-self: end;
-                align-self: center;
-
-                max-width: 20em;
-            }
-
-            .main-image {
                 max-width: 25em;
             }
         }

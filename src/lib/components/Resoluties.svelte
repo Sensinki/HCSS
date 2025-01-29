@@ -28,7 +28,11 @@
         <section>
             <h1>Resoluties</h1>
 
-            <p>Resoluties zijn officiële besluiten of uitspraken waarover gestemd wordt. Ze hebben betrekking op uiteenlopende onderwerpen in de thema’s.</p>
+            <p>
+                Within the United Nations, resolutions are drafted to address various topics and these are discussed by the general assembly where the G20 is
+                part of.
+            </p>
+            <p>Using data from Gina Diplomatic, the divisions in resolutions are analyzed.</p>
         </section>
 
         <img
@@ -62,6 +66,10 @@
                 width: 80vw;
                 max-width: 30em;
             }
+
+            h1 {
+                text-align: center;
+            }
         }
     }
 
@@ -76,10 +84,10 @@
     @media screen and (width > 55rem) {
         .component {
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            gap: 5em;
+            gap: 2em;
 
             section {
                 order: -1;
@@ -89,7 +97,7 @@
                 justify-self: end;
                 align-self: center;
 
-                max-width: 25em;
+                max-width: 15em;
             }
         }
     }

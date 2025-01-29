@@ -14,13 +14,14 @@
         justify-content: center;
         align-items: center;
         gap: 4em;
+
+        padding: 0 3em;
     }
 
     h1 {
         max-width: 58rem;
         margin-bottom: 15vh;
     }
-  
 
     @keyframes scroll {
         from {

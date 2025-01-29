@@ -1,15 +1,15 @@
 <script>
     import WorldMap from "$lib/components/WorldMap.svelte";
-    import Verdeeldheid from "$lib/components/Verdeeldheid.svelte";
+    import G20 from "$lib/components/G20.svelte";
+    import VotingBehaviour from "$lib/components/VotingBehaviour.svelte";
+    import PreviewExplanation from "$lib/components/PreviewExplanation.svelte";
+
     import Themas from "$lib/components/Themas.svelte";
     import Resoluties from "$lib/components/Resoluties.svelte";
     import Results from "$lib/components/Results.svelte";
     import VnBuilding from "$lib/components/VnBuilding.svelte";
 
     import { isScrollingDown, isScrollingUp, isScrolling } from "../stores/scroll.js";
-    import G20 from "$lib/components/G20.svelte";
-    import VotingBehaviour from "$lib/components/VotingBehaviour.svelte";
-    import PreviewExplanation from "$lib/components/PreviewExplanation.svelte";
 </script>
 
 <header></header>
@@ -28,15 +28,15 @@
     <div class="space"></div>
 
     <Themas />
-    <div class="line"><div></div></div>
-
-    <Resoluties />
-    <div class="line"><div></div></div>
-
-    <Results />
     <div class="space"></div>
 
-    <Verdeeldheid />
+    <!-- <div class="line"><div></div></div> -->
+
+    <Resoluties />
+    <div class="space"></div>
+    <!-- <div class="line"><div></div></div> -->
+
+    <Results />
     <div class="space"></div>
 
     <VnBuilding />

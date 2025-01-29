@@ -26,11 +26,11 @@
 <section>
     <section class="component">
         <section>
-            <h1>Thema's</h1>
+            <h1>Themes</h1>
 
             <p>
-                Ontdek hoe de G20 stemt over belangrijke thema's en waar de grootste verschillen liggen. Dit gebeurt in het VN-gebouw, waar landen stemmen over
-                resoluties die de wereld vormgeven.
+                There is a wide range of topics. These topics are divided into different themes. The themes form a basis for the resolutions and focus on a
+                global cooperation
             </p>
         </section>
 
@@ -85,17 +85,12 @@
     @media screen and (width > 1rem) {
         .component {
             display: flex;
-            justify-items: center;
+            flex-direction: column;
+            justify-content: center;
             align-items: center;
+            gap: 2em;
 
             padding: 0 3em;
-
-            section {
-                display: flex;
-                flex-direction: column;
-                gap: 1em;
-                width: 27em;
-            }
 
             img {
                 width: 3em;
@@ -104,12 +99,12 @@
             /* THEMA'S */
             ul {
                 display: grid;
-                grid-template-columns: repeat(2, 1fr);
-                grid-template-rows: repeat(3, 1fr);
-                grid-gap: 1.5em;
+                grid-template-columns: repeat(1, 1fr);
+                grid-template-rows: repeat(6, 1fr);
+                grid-gap: .5em;
                 justify-content: center;
                 align-items: stretch;
-                align-self: start;
+                align-self: center;
 
                 padding: 0.5em;
                 z-index: 1;
@@ -158,6 +153,10 @@
                 animation-delay: 1.5s;
             }
         }
+
+        h1 {
+            text-align: center;
+        }
     }
 
     @media screen and (width > 24rem) {
@@ -165,6 +164,16 @@
             ul {
                 max-width: 60vw;
                 max-height: 40vh;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(3, 1fr);
+                grid-gap: 1.5em;
+                justify-content: center;
+                align-items: stretch;
+                align-self: center;
+
+                padding: 0.5em;
+                z-index: 1;
             }
         }
     }
