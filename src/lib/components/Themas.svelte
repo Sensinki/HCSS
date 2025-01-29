@@ -84,7 +84,7 @@
 <style>
     @media screen and (width > 1rem) {
         .component {
-            display: grid;
+            display: flex;
             justify-items: center;
             align-items: center;
 
@@ -172,10 +172,10 @@
     @media screen and (width > 55rem) {
         .component {
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            gap: 5em;
+            gap: 2em;
 
             img {
                 width: 4em;

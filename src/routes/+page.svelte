@@ -27,9 +27,6 @@
     <PreviewExplanation />
     <div class="space"></div>
 
-    <Verdeeldheid />
-    <div class="space"></div>
-
     <Themas />
     <div class="line"><div></div></div>
 
@@ -37,6 +34,9 @@
     <div class="line"><div></div></div>
 
     <Results />
+    <div class="space"></div>
+
+    <Verdeeldheid />
     <div class="space"></div>
 
     <VnBuilding />
@@ -54,7 +54,6 @@
         alt="visual"
         class="animation"
     />
-
 </main>
 
 <style>
