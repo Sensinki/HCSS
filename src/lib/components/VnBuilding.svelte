@@ -3,7 +3,7 @@
 
     let h1Element;
     let isVisible = false;
-    let text = "Verdeeldheid van de G20 in 2023. Bekijk het in het VN gebouw";
+    let text = "G20 divisions in 2023. Watch it in the UN building";
     let displayedText = "";
     let animationStarted = false;
 
@@ -13,7 +13,7 @@
         if (index < text.length) {
             displayedText += text.charAt(index);
             index++;
-            setTimeout(typeEffect, 100); 
+            setTimeout(typeEffect, 100);
         } else {
             startOtherAnimations();
         }
@@ -29,7 +29,7 @@
                 entries.forEach((entry) => {
                     if (entry.isIntersecting) {
                         isVisible = true;
-                        typeEffect(); 
+                        typeEffect();
                         observer.disconnect();
                     }
                 });
@@ -56,6 +56,7 @@
                 src="/images/vn-gebouw.png"
                 alt="VN Building"
             />
+            <a href="https://ginadiplomatic.app.hcss.nl/SpeechesStateLevel">Discorver more on GINA Diplomatic</a>
         </section>
     </section>
 </section>
@@ -73,20 +74,33 @@
                 align-items: center;
                 height: 30vh;
                 width: 100vw;
-                background-color: #efefef;
+                background-color: transparent;
             }
-
             #arrow-end {
                 width: 0;
+                position: absolute;
                 height: 0;
+                rotate: 180deg;
                 border-left: 50vw solid transparent;
                 border-right: 50vw solid transparent;
-                border-top: 20vh solid #efefef;
+                top: 0rem;
+                border-top: 85vh solid transparent;
+            }
+
+            #arrow-end::before {
+                content: "";
+                position: absolute;
+                top: -35rem;
+                left: -50vw;
+                width: 100vw;
+                height: 75vh;
+                background: linear-gradient(to bottom, rgba(239, 239, 239, 0.376), rgba(239, 239, 239, 0) 100%);
+                clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
             }
 
             > section:nth-of-type(2) {
                 position: absolute;
-                top: 40vh;
+                top: 35vh;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
@@ -107,6 +121,16 @@
                 width: unset;
                 max-width: 40em;
                 overflow: hidden;
+            }
+
+            a {
+                background-color: #efefef25;
+                padding: 0.75em 2em;
+                border-radius: 0.5em;
+                /* text-decoration: none; */
+                text-align: center;
+                color: #efefef;
+                font-weight: bold;
             }
         }
     }
@@ -129,8 +153,8 @@
                 order: -1;
             }
 
-            #arrow-end {
-                border-top: 15vh solid #efefef;
+            #arrow-end::before {
+                top: -27rem;
             }
 
             h1 {

@@ -16,7 +16,7 @@
 
 <main>
     <WorldMap />
-    <div id="arrow-start"></div>
+    <div class="space"></div>
 
     <G20 />
     <div class="space"></div>
@@ -30,11 +30,8 @@
     <Themas />
     <div class="space"></div>
 
-    <!-- <div class="line"><div></div></div> -->
-
     <Resoluties />
     <div class="space"></div>
-    <!-- <div class="line"><div></div></div> -->
 
     <Results />
     <div class="space"></div>
@@ -45,10 +42,10 @@
         href="/"
         class:hide={$isScrolling || $isScrollingUp}>Go to treemap</a
     >
-    <!-- <img
+    <img
         src="/images/gina.png"
         alt="Gina Diplomatic"
-    /> -->
+    />
     <img
         src="/images/visual-bottomright.png"
         alt="visual"
@@ -58,7 +55,7 @@
 
 <style>
     @media screen and (width > 1rem) {
-        a {
+        a:nth-of-type(1) {
             position: fixed;
             top: 92vh;
             right: 1em;
@@ -81,48 +78,26 @@
             z-index: 1000;
         }
 
-        a.hide {
+        a:nth-of-type(1).hide {
             opacity: 0.65;
         }
 
-        /* img:nth-of-type(1) {
-            position: fixed;
-            top: 20vh;
-            left: 5vw;
-            width: 85vw;
-            opacity: .5;
-
-            z-index: 0;
-            animation: moveBackground 10s cubic-bezier(0.42, 0, 0.58, 1) infinite;
-        } */
+        img:nth-of-type(1) {
+            opacity: 0;
+        }
 
         .animation {
-            position: sticky;
-            top: unset;
-            bottom: -6em;
-            right: unset;
-            left: 100em;
-            width: 40em;
+            position: fixed;
+            top: 40vh;
+            left: 50vw;
+            width: 55em;
             height: auto;
 
             opacity: 0.35 !important;
 
-            z-index: -2;
-            animation: moveBackground 10s cubic-bezier(0.42, 0, 0.58, 1) infinite reverse;
+            z-index: -100;
+            /* animation: moveBackground 10s cubic-bezier(0.42, 0, 0.58, 1) infinite reverse; */
         }
-
-        /* img:nth-of-type(2) {
-            position: fixed;
-            bottom: -3em;
-            right: -4em;
-            width: 40em;
-            height: auto;
-
-            opacity: 0.1;
-
-            z-index: 0;
-            animation: moveBackground 10s cubic-bezier(0.42, 0, 0.58, 1) infinite reverse;
-        } */
 
         /* GLOBAL */
         :global(*) {
@@ -222,39 +197,12 @@
             height: 20vh;
             width: 100vw;
         }
-
-        .line {
-            height: 20vh;
-            width: 100vw;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .line div {
-            height: 15vh;
-            width: 0.3em;
-            background-color: #efefef;
-            border-radius: 0.5em;
-        }
-
-        /* #arrow-start {
-            width: 0;
-            height: 0;
-            border-left: 50vw solid transparent;
-            border-right: 50vw solid transparent;
-            border-bottom: 30vh solid #efefef;
-        } */
     }
 
     @media screen and (width > 24rem) {
     }
 
     @media screen and (width > 38rem) {
-        a {
-            top: 87vh;
-            opacity: 1;
-        }
-
         :global(h1) {
             font-weight: 600;
             font-size: 42pt;
@@ -264,8 +212,23 @@
             font-size: 14pt;
             line-height: 20pt;
         }
-    }
 
+        img:nth-of-type(1) {
+            position: fixed;
+            top: 20vh;
+            left: 5vw;
+            width: 85vw;
+            opacity: 0.35;
+
+            z-index: 0;
+            animation: moveBackground 10s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+        }
+    }
+    @media screen and (width > 55rem) {
+        a:nth-of-type(1) {
+            top: 82vh;
+        }
+    }
     /* ANIMATIONS */
     @keyframes moveBackground {
         0% {

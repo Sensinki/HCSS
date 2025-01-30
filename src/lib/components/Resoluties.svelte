@@ -64,7 +64,7 @@
                 flex-direction: column;
                 gap: 1em;
                 width: 80vw;
-                max-width: 30em;
+                max-width: 40em;
             }
 
             h1 {
