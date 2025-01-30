@@ -69,7 +69,7 @@
                 max-width: 15em;
                 justify-self: center;
                 align-self: center;
-                margin-top: 2em;
+                /* margin-top: 1em; */
                 opacity: 0;
                 animation: fadeIn 2s ease forwards;
             }
@@ -95,8 +95,8 @@
                     grid-template-columns: 1fr 1fr 1fr;
                     justify-content: center;
                     align-items: center;
-                    gap: .75em;
-                    padding-top: 1.5em;
+                    gap: 1em;
+                    padding-top: 1em;
 
                     max-width: 25em;
 

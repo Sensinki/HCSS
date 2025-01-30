@@ -25,57 +25,55 @@
 
 <section>
     <section class="component">
+        <ul>
+            <li>
+                <img
+                    src="/images/flags/france.png"
+                    alt="France Icon"
+                />
+            </li>
+            <li>
+                <img
+                    src="/images/flags/germany.png"
+                    alt="Germany Icon"
+                />
+            </li>
+            <li>
+                <img
+                    src="/images/flags/india.png"
+                    alt="India Icon"
+                />
+            </li>
+        </ul>
         <section>
-            <h1>Themes</h1>
+            <h1>The UN</h1>
 
+            <p>Founded in 1945 and comprising 193 member states, the United Nations (UN) promotes peace, stability and international cooperation.</p>
+            <p>From its iconic headquarters in New York, countries discuss global issues and make decisions on topics such as economics and human rights.</p>
             <p>
-                There is a wide range of topics. These topics are divided into different themes. The themes form a basis for the resolutions and focus on a
-                global cooperation
+                The UN flagpoles, in a circle with equal spacing, symbolise equality among member states, while the General Assembly building is the heart of
+                decision-making.
             </p>
         </section>
 
         <ul>
             <li>
                 <img
-                    src="/images/icons/Human_Rights2.svg"
-                    alt="Human Rights Icon"
+                    src="/images/flags/indonesia.png"
+                    alt="France Icon"
                 />
-                <p>Human Rights</p>
             </li>
             <li>
                 <img
-                    src="/images/icons/Colonialism2.svg"
-                    alt="Colonialism Icon"
+                    src="/images/flags/russia.png"
+                    alt="Germany Icon"
                 />
-                <p>Colonialism</p>
             </li>
             <li>
                 <img
-                    src="/images/icons/Economics2.svg"
-                    alt="Economics Icon"
+                    src="/images/flags/italy.png"
+                    alt="India Icon"
                 />
-                <p>Economics</p>
-            </li>
-            <li>
-                <img
-                    src="/images/icons/Israel_Palestina_Conflict2.svg"
-                    alt="Israel Palestina Conflict Icon"
-                />
-                <p>Israel Palestina Conflict</p>
-            </li>
-            <li>
-                <img
-                    src="/images/icons/Nuclear_Weapons2.svg"
-                    alt="Nuclear Weapons Icon"
-                />
-                <p>Nuclear Weapons</p>
-            </li>
-            <li>
-                <img
-                    src="/images/icons/Arms_Control_And_Disarmament2.svg"
-                    alt="Arms Control and Disarment Icon"
-                />
-                <p>Arms Control and Disarment</p>
             </li>
         </ul>
     </section>
@@ -88,20 +86,26 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            gap: 2em;
+            gap: 4em;
 
             padding: 0 3em;
 
             img {
-                width: 3em;
+                width: 5em;
+            }
+
+            section:nth-of-type(1) {
+                display: flex;
+                flex-direction: column;
+                gap: 2em;
             }
 
             /* THEMA'S */
             ul {
                 display: grid;
-                grid-template-columns: repeat(1, 1fr);
-                grid-template-rows: repeat(6, 1fr);
-                grid-gap: 0.5em;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-rows: 1fr;
+                grid-gap: 2em;
                 justify-content: center;
                 align-items: stretch;
                 align-self: center;
@@ -112,22 +116,20 @@
 
             li {
                 display: grid;
-                grid-template-columns: max-content 7em;
+                grid-template-columns: 1fr;
                 grid-template-rows: 1fr;
 
                 justify-content: center;
                 align-items: center;
                 gap: 1em;
 
-                padding: 0.5em;
-                background-color: #efefef;
+                padding: 0.25em;
 
                 opacity: 0;
                 animation: fadeIn 0.8s ease forwards;
 
                 p {
                     font-weight: bold;
-                    color: black;
                 }
             }
 
@@ -164,40 +166,35 @@
 
     @media screen and (width > 24rem) {
         .component {
-            ul {
-                max-width: 60vw;
-                max-height: 40vh;
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
-                grid-template-rows: repeat(3, 1fr);
-                grid-gap: 1.5em;
-                justify-content: center;
-                align-items: stretch;
-                align-self: center;
-
-                padding: 0.5em;
-                z-index: 1;
-            }
         }
     }
 
     @media screen and (width > 55rem) {
         .component {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: 2em;
+            flex-direction: row;
 
             img {
-                width: 4em;
+                width: 6em;
             }
 
             ul {
+                display: grid;
+                grid-template-rows: 1fr 1fr 1fr;
+                grid-template-columns: 1fr;
+                gap: 4em;
                 align-self: center;
                 max-width: 90vw;
                 max-height: 80vh;
                 padding: 1em;
+            }
+
+            ul:nth-of-type(1) li:nth-of-type(1),
+            ul:nth-of-type(1) li:nth-of-type(3) {
+                padding-left: 3em;
+            }
+
+            ul:nth-of-type(2) li:nth-of-type(2) {
+                padding-left: 3em;
             }
         }
     }

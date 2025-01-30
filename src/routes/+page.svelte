@@ -3,6 +3,7 @@
     import G20 from "$lib/components/G20.svelte";
     import VotingBehaviour from "$lib/components/VotingBehaviour.svelte";
     import PreviewExplanation from "$lib/components/PreviewExplanation.svelte";
+    import Un from "$lib/components/UN.svelte";
 
     import Themas from "$lib/components/Themas.svelte";
     import Resoluties from "$lib/components/Resoluties.svelte";
@@ -25,6 +26,9 @@
     <div class="space"></div>
 
     <PreviewExplanation />
+    <div class="space"></div>
+
+    <Un />
     <div class="space"></div>
 
     <Themas />
@@ -226,7 +230,7 @@
     }
     @media screen and (width > 55rem) {
         a:nth-of-type(1) {
-            top: 82vh;
+            top: 85vh;
         }
     }
     /* ANIMATIONS */

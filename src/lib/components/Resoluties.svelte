@@ -26,7 +26,7 @@
 <section>
     <section class="component">
         <section>
-            <h1>Resoluties</h1>
+            <h1>Resolutions</h1>
 
             <p>
                 Within the United Nations, resolutions are drafted to address various topics and these are discussed by the general assembly where the G20 is
